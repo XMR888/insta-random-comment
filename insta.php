@@ -7,8 +7,8 @@
 	*	This simple code is written on the knee with love.
 	*	It may work, may not work, as lucky.
 	*	Please do not use for commercial purposes.	
-  * ! Not load more than 600 comments per request.
-  * ! Required comments cache first
+        * ! Not load more than 600 comments per request.
+        * ! Required comments cache first
 	********************************************************/
 	
 ini_set("log_errors", 1);
