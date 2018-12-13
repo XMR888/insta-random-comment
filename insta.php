@@ -62,7 +62,6 @@ if (file_exists('/tmp/'.$cache_file) && file_exists('/tmp/'.$cache_file.'.base')
 	$post_id = $media->getId();
 	$post_code = $media->getShortCode();
 	$range = $media->getCommentsCount();
-	#echo "Post image:".$top_post_image."\r\nPost ID: ".$post_id."\r\n";
 	$account = $media->getOwner();
 	$post_author = $account->getUsername();
 	$post_likes = $media->getLikesCount();
@@ -80,8 +79,6 @@ if (file_exists('/tmp/'.$cache_file) && file_exists('/tmp/'.$cache_file.'.base')
 		$result['message'] = 'Insta not loaded data.';
 		die(json_encode($result));
 	}
-	
-	#echo print_r($comments,true);
 	if (empty($comments)) {
 		# Если нет комментов умираем
 		$result['code'] = '997';
@@ -110,7 +107,6 @@ if (file_exists('/tmp/'.$cache_file) && file_exists('/tmp/'.$cache_file.'.base')
 	);
 	file_put_contents('/tmp/'.$cache_file.'.base', json_encode($base_data));
 }
-
 # Данные на страницу
 $result['code'] = '200';
 $result['topimage'] = $top_post_image;
