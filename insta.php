@@ -116,7 +116,7 @@ $result['postauthor'] = $post_author;
 $result['postlikes'] = $post_likes;
 srand();
 $randomresult = rand(0,$range);
-$result['maxrange'] = $range;
+$result['maxrange'] = $range+1;
 $result['winresult'] = $randomresult;
 $wincomment = array_get_by_index($randomresult,$comms);
 $result['winnername'] = $wincomment['username'];
